@@ -1,0 +1,17 @@
+{
+  "@@locale": "ja",
+  "appTitle": "Lucid Reader",
+  "libraryTitle": "ライブラリ",
+  "settingsTitle": "設定",
+  "emptyLibraryTitle": "本はまだありません",
+  "emptyLibrarySubtitle": "インポートした本がここに表示されます。",
+  "importBookAction": "本をインポート",
+  "importUnavailableMessage": "本のインポートは次の段階で実装します。",
+  "interfaceLanguageSection": "インターフェース言語",
+  "localeSystem": "システムに合わせる",
+  "localeEnglish": "English",
+  "localeChinese": "中文",
+  "localeJapanese": "日本語",
+  "unknownRouteTitle": "ページが見つかりません",
+  "unknownRouteMessage": "このページは利用できません。"
+}

@@ -1,6 +1,6 @@
 {
-    "name": "lucid_reader",
-    "short_name": "lucid_reader",
+    "name": "Lucid Reader",
+    "short_name": "Lucid Reader",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

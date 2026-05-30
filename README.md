@@ -1,4 +1,4 @@
-# lucid_reader
+# Lucid Reader
 
 A new Flutter project.
 
