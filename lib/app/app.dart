@@ -22,11 +22,17 @@ class LucidReaderApp extends StatelessWidget {
       child: ListenableBuilder(
         listenable: settingsController,
         builder: (context, _) {
+          final resolvedLocale = AppLocaleResolution.resolve(
+            settingsController.appLocale ??
+                WidgetsBinding.instance.platformDispatcher.locale,
+            AppLocalizations.supportedLocales,
+          );
+
           return MaterialApp(
             onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
             debugShowCheckedModeBanner: false,
-            theme: AppTheme.light(),
-            darkTheme: AppTheme.dark(),
+            theme: AppTheme.light(locale: resolvedLocale),
+            darkTheme: AppTheme.dark(locale: resolvedLocale),
             themeMode: settingsController.themeMode,
             locale: settingsController.appLocale,
             supportedLocales: AppLocalizations.supportedLocales,
