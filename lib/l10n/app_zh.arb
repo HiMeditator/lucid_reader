@@ -1,0 +1,17 @@
+{
+  "@@locale": "zh",
+  "appTitle": "Lucid Reader",
+  "libraryTitle": "书库",
+  "settingsTitle": "设置",
+  "emptyLibraryTitle": "还没有书籍",
+  "emptyLibrarySubtitle": "导入后的书籍会显示在这里。",
+  "importBookAction": "导入书籍",
+  "importUnavailableMessage": "书籍导入将在下一阶段实现。",
+  "interfaceLanguageSection": "界面语言",
+  "localeSystem": "跟随系统",
+  "localeEnglish": "English",
+  "localeChinese": "中文",
+  "localeJapanese": "日本語",
+  "unknownRouteTitle": "页面不存在",
+  "unknownRouteMessage": "此页面暂不可用。"
+}

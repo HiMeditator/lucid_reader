@@ -1,0 +1,59 @@
+{
+  "@@locale": "en",
+  "appTitle": "Lucid Reader",
+  "@appTitle": {
+    "description": "The application title."
+  },
+  "libraryTitle": "Library",
+  "@libraryTitle": {
+    "description": "Title for the book library screen."
+  },
+  "settingsTitle": "Settings",
+  "@settingsTitle": {
+    "description": "Title for the settings screen and settings navigation action."
+  },
+  "emptyLibraryTitle": "No books yet",
+  "@emptyLibraryTitle": {
+    "description": "Empty state headline shown when the user has no imported books."
+  },
+  "emptyLibrarySubtitle": "Your imported books will appear here.",
+  "@emptyLibrarySubtitle": {
+    "description": "Empty state body shown when the user has no imported books."
+  },
+  "importBookAction": "Import book",
+  "@importBookAction": {
+    "description": "Action label for importing a book."
+  },
+  "importUnavailableMessage": "Book import is planned for the next stage.",
+  "@importUnavailableMessage": {
+    "description": "Snackbar shown when book import is selected before the import flow is implemented."
+  },
+  "interfaceLanguageSection": "Interface language",
+  "@interfaceLanguageSection": {
+    "description": "Settings section title for selecting the app interface language."
+  },
+  "localeSystem": "Follow system",
+  "@localeSystem": {
+    "description": "Option label for using the operating system locale."
+  },
+  "localeEnglish": "English",
+  "@localeEnglish": {
+    "description": "Option label for the English interface locale."
+  },
+  "localeChinese": "中文",
+  "@localeChinese": {
+    "description": "Option label for the Chinese interface locale."
+  },
+  "localeJapanese": "日本語",
+  "@localeJapanese": {
+    "description": "Option label for the Japanese interface locale."
+  },
+  "unknownRouteTitle": "Page not found",
+  "@unknownRouteTitle": {
+    "description": "Title for an unknown route screen."
+  },
+  "unknownRouteMessage": "This destination is not available.",
+  "@unknownRouteMessage": {
+    "description": "Body text for an unknown route screen."
+  }
+}
