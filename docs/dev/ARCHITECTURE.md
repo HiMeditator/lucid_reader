@@ -37,7 +37,9 @@ lib/
   app/
     app.dart
     router.dart
+    localization/
     theme/
+  l10n/
   core/
     config/
     errors/
@@ -85,7 +87,15 @@ lib/
 - `ai` 负责聊天、提示词、Provider 配置、流式响应。
 - `tts` 负责语音 Provider、朗读队列、音频播放。
 - `search` 负责分块、Embedding、全文检索、RAG。
-- `settings` 负责模型、语言、隐私、外观等配置。
+- `settings` 负责模型、界面语言、翻译目标语言、TTS 语言、隐私、外观等配置。
+- `l10n` 保存 Flutter 本地化资源，初始包含英语、中文和日语，并为后续语言扩展保留一致的 key 结构。
+
+国际化要求：
+
+- UI 层不得直接写死用户可见文案，应通过本地化 key 获取界面文本。
+- 界面 locale 与书籍语言、翻译目标语言、TTS 语言分离，避免切换 UI 语言时意外改变阅读或 AI 行为。
+- Locale 状态应由应用级配置驱动，支持跟随系统语言和用户手动选择。
+- 添加新语言时，原则上只新增本地化资源、注册 supported locale 和补齐验证，不修改 domain 或 application 层业务逻辑。
 
 ## 3. 数据模型草案
 
@@ -181,6 +191,17 @@ lib/
 - `created_at`
 - `updated_at`
 
+### 3.8 AppSettings
+
+- `id`
+- `interface_locale_mode`: `system` 或 `manual`
+- `interface_locale`: BCP 47 locale tag，例如 `en`、`zh`、`ja`
+- `translation_target_language`
+- `tts_language`
+- `theme_mode`
+- `reader_appearance_json`
+- `updated_at`
+
 ## 4. 本地存储
 
 推荐存储类型：
@@ -209,6 +230,7 @@ app_data/
 迁移要求：
 
 - 数据库必须有 schema version。
+- 配置表必须能保存界面语言偏好；新增 locale 不应要求迁移用户数据。
 - 书籍解析产物和向量索引必须能重建。
 - 应提供“重建索引”“清理缓存”“修复书库”入口。
 
@@ -323,6 +345,8 @@ MVP 建议目标：
 
 单元测试：
 
+- 本地化资源 key 完整性。
+- Locale 选择和回退逻辑。
 - 文档分块。
 - 阅读位置序列化。
 - Provider 请求转换。
@@ -341,6 +365,7 @@ MVP 建议目标：
 
 - 导入一本书。
 - 打开阅读页。
+- 切换英语、中文、日语界面语言。
 - 选中文字翻译。
 - 生成语义索引。
 - 基于书籍提问并跳转引用。
